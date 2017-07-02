@@ -1,3 +1,4 @@
+<?xml-stylesheet type="text/xsl" href="hello.xsl"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -7,6 +8,8 @@
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
 	</parent>
+	
+<hello-world>   <greeting>Hello, World!</greeting></hello-world>
 
 	<groupId>uk.co.jemos.podam</groupId>
 	<artifactId>podam</artifactId>
@@ -527,9 +530,9 @@
 
 	<profiles>
 		<profile>
-			<id>doclint-java7</id>
+			<id>doclint-java8</id>
 			<activation>
-				<jdk>[1.7,)</jdk>
+				<jdk>[1.8,)</jdk>
 			</activation>
 			<properties>
 				<javadoc.opts>-Xdoclint:all</javadoc.opts>
