@@ -53,21 +53,6 @@
 		<url>scm:git clone git@github.com:devopsfolks/podam.git</url>
 		<connection>scm:git clone git://github.com/devopsfolks/podam.git</connection>
 	</scm>
-
-	<repositories>
-     <repository>
-+      <id>egit</id>
-+      <name>Eclipse egit</name>
-+      <url>https://repo.eclipse.org/content/repositories/egit-releases/</url>
-+    </repository>
-+    <repository>
-       <id>fcrepo-snapshot</id>
-       <name>Fcrepo Snapshot Repository</name>
-       <url>http://maven.fcrepo.org/nexus/content/repositories/snapshots/</url>
-	</repository>
-		</repositories>	
-	
-	
 	
 	<developers>
 		<developer>
@@ -542,9 +527,9 @@
 
 	<profiles>
 		<profile>
-			<id>doclint-java8</id>
+			<id>doclint-java7</id>
 			<activation>
-				<jdk>[1.8,)</jdk>
+				<jdk>[1.7,)</jdk>
 			</activation>
 			<properties>
 				<javadoc.opts>-Xdoclint:all</javadoc.opts>
