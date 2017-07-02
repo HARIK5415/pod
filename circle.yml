@@ -1,10 +1,6 @@
 machine:
   timezone:
     America/Los_Angeles
-    dependencies:
-    override:
-- mvn -o clean install -DskipTests=true
-
 test:
   override:
     - /bin/true
