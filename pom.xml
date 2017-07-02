@@ -555,6 +555,11 @@
 
 	<profiles>
 		<profile>
+
+    <properties>
+        <skipTests>true</skipTests>
+        <benchmark>org.apache</benchmark>
+      </properties>
 			<id>doclint-java8</id>
 			<activation>
 				<jdk>[1.8,)</jdk>
