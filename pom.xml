@@ -445,11 +445,18 @@
 			<artifactId>validation-api</artifactId>
 			<version>1.1.0.Final</version>
 		</dependency>
+		
+		 <dependency>
+          <groupId>org.eclipse.mylyn.github</groupId>
+          <artifactId>org.eclipse.egit.github.core</artifactId>
+          <version>3.1.0.201310021548</version>
+        </dependency>
+		
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.5</version>
-		</dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+          <version>3.4</version>
+        </dependency>
 
 		<!-- Testing dependencies -->
 		<dependency>
