@@ -3,7 +3,6 @@ machine:
     America/Los_Angeles
     dependencies:
     override:
-- mvn --fail-never dependency:go-offline || true
 - mvn -o clean install -DskipTests=true
 
 test:
