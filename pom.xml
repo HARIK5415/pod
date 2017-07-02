@@ -12,7 +12,7 @@
 	<groupId>uk.co.jemos.podam</groupId>
 	<artifactId>podam</artifactId>
 	<version>7.1.0-SNAPSHOT</version>
-	<name>pod</name>
+	<name>podam</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -163,21 +163,6 @@
 
 
 	<build>
-
-<pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-scm-publish-plugin</artifactId>
-          <version>1.1</version>
-          <configuration>
-            <ignorePathsToDelete>
-              <ignorePathToDelete>archives/**</ignorePathToDelete>
-            </ignorePathsToDelete>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>  
 		<extensions>
 			<extension>
 				<groupId>org.apache.maven.scm</groupId>
@@ -196,18 +181,6 @@
 			</extension>
 		</extensions>
 		<plugins>
-
-
- <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <excludes>
-            <exclude>**/perf/PerformanceTest.java</exclude>
-          </excludes>
-        </configuration>
-      </plugin>
-			 			
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
@@ -349,7 +322,14 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
+			</plugin>
 			<plugin>
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<version>2.19</version>
@@ -472,18 +452,11 @@
 			<artifactId>validation-api</artifactId>
 			<version>1.1.0.Final</version>
 		</dependency>
-		
-		 <dependency>
-          <groupId>org.eclipse.mylyn.github</groupId>
-          <artifactId>org.eclipse.egit.github.core</artifactId>
-          <version>3.1.0.201310021548-r</version>
-        </dependency>
-		
 		<dependency>
-          <groupId>org.apache.commons</groupId>
-          <artifactId>commons-lang3</artifactId>
-          <version>3.4</version>
-        </dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
+		</dependency>
 
 		<!-- Testing dependencies -->
 		<dependency>
@@ -555,11 +528,6 @@
 
 	<profiles>
 		<profile>
-
-    <properties>
-        <skipTests>true</skipTests>
-        <benchmark>org.apache</benchmark>
-      </properties>
 			<id>doclint-java8</id>
 			<activation>
 				<jdk>[1.8,)</jdk>
