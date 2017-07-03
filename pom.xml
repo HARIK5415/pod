@@ -242,7 +242,6 @@
 						<phase>site</phase>
 					</execution>
 				</executions>
-							
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -537,13 +536,13 @@
 			</properties>
 		</profile>
 	</profiles>
-
-	   <repositories>
+<repositories>
 <repository>
 <id>egit</id>
 <name>Eclipse egit</name>
 <url>https://repo.eclipse.org/content/repositories/egit-releases/</url>
 </repository>
 </repositories>
+
 </project>
 
