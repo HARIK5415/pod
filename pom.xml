@@ -433,6 +433,12 @@
 
 	<dependencies>
 		<dependency>
+    <groupId>org.eclipse.mylyn.github</groupId>
+    <artifactId>org.eclipse.egit.github.core</artifactId>
+    <version>3.1.0.201310021548-r</version>
+</dependency>
+		
+		<dependency>
 			<groupId>net.jcip</groupId>
 			<artifactId>jcip-annotations</artifactId>
 			<version>1.0</version>
@@ -542,7 +548,7 @@
 <repository>
 <id>egit</id>
 <name>Eclipse egit</name>
-<url>https://repo.eclipse.org/content/repositories/egit-releases/</url>
+<url>https://mvnrepository.com/artifact/</url>
 </repository>
 </repositories>
 
