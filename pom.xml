@@ -242,14 +242,7 @@
 						<phase>site</phase>
 					</execution>
 				</executions>
-				<dependencies>
-                        <dependency>
-                            <groupId>org.eclipse.mylyn.github</groupId>
-                            <artifactId>org.eclipse.egit.github.core</artifactId>
-                            <version>2.1.5</version>
-                        </dependency>
-                    </dependencies>
-				
+							
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -545,7 +538,13 @@
 		</profile>
 	</profiles>
 
-	
+ <repositories>
+<repository>
+<id>egit</id>
+<name>Eclipse egit</name>
+<url>https://repo.eclipse.org/content/repositories/egit-releases/</url>
+</repository>
+</repositories>	
 
 </project>
 
